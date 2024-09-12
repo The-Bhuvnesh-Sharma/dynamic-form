@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Loan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    body {
+        padding-left: 18rem;
+        padding-right: 18rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    @media (max-width: 320px) {
+        body {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        body {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        body {
+            padding-left: 3.5rem;
+            padding-right: 3.5rem;
+        }
+    }
+
+    .Loan {
+        font-weight: 600;
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+
+    .main {
+        display: grid;
+        gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .main {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.75rem;
+        }
+    }
+
+    .main2 {
+        display: grid;
+        gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .main2 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.75rem;
+        }
+    }
+
+    .bank {
+        display: grid;
+        gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .bank {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1.75rem;
+        }
+    }
+
+    .sub-heading {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 400;
+    }
+    button{
+        padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    border: none;
+    }
+    .text-lg{
+    font-size: 1.125rem; 
+    line-height: 1.75rem
+    }
+    .add-more{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <p class="Loan">Loan Application Form</p>
+    <form class="mt-5" action="/submit-loan" method="POST">
+        <div class="main">
+            <div>
+                <label for="desired-loan" class="form-label ">Desired Loan Amount $</label>
+                <input placeholder="0" type="number" class="form-control" id="esired-loan" aria-describedby="emailHelp">
+
+            </div>
+            <div>
+                <label for="annual-income" class="form-label ">Annual Income $</label>
+                <input placeholder="0" type="number" class="form-control" id="annual-income"
+                    aria-describedby="emailHelp">
+            </div>
+        </div>
+        <p class="sub-heading mt-3">Loan will be used for</p>
+        <div class="main mt-2">
+            <div class="form-check flex items-center" style="display: flex;  align-items: center;">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Business Launching
+                </label>
+            </div>
+
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    House Buying
+                </label>
+            </div>
+
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Home Improvement
+                </label>
+            </div>
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Investment
+                </label>
+            </div>
+
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Education
+                </label>
+            </div>
+
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Other
+                </label>
+            </div>
+
+        </div>
+        <p class="sub-heading mt-3">Contact Information</p>
+        <div class="mt-2 main2">
+            <div>
+                <label for="desired-loan" class="form-label ">Title</label>
+                <input type="text" class="form-control" id="esired-loan" aria-describedby="emailHelp">
+            </div>
+            <div>
+                <label for="annual-income" class="form-label ">First Name</label>
+                <input type="text" class="form-control" id="annual-income" aria-describedby="emailHelp">
+            </div>
+            <div>
+                <label for="annual-income" class="form-label ">Last Name</label>
+                <input type="text" class="form-control" id="annual-income" aria-describedby="emailHelp">
+            </div>
+        </div>
+
+        <p for="dob-day" class="sub-heading mt-3">Date of birth</p>
+        <div class="main2 mt-2">
+            <select name="dob-day" class="form-control" id="dob-day">
+                <option value="">Day</option>
+                <option value="">---</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+            <select name="dob-month" class="form-control" id="dob-month">
+                <option value="">Month</option>
+                <option value="">-----</option>
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <select name="dob-year" class="form-control" id="dob-year">
+                <option value="">Year</option>
+                <option value="">----</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1980">1980</option>
+                <option value="1979">1979</option>
+                <option value="1978">1978</option>
+                <option value="1977">1977</option>
+                <option value="1976">1976</option>
+                <option value="1975">1975</option>
+                <option value="1974">1974</option>
+                <option value="1973">1973</option>
+                <option value="1972">1972</option>
+                <option value="1971">1971</option>
+            </select>
+        </div>
+
+        <p class="sub-heading mt-3">Marital Status:</p>
+        <div class="main2 mt-2">
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Single
+                </label>
+            </div>
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Marriend
+                </label>
+            </div>
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Other
+                </label>
+            </div>
+        </div>
+
+        <div class="main mt-3">
+            <div class="">
+                <label for="exampleInputEmail1" class="text-lg ">E-mail</label>
+                <input placeholder="xyz@gmail.com" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+            </div>
+            <div class="">
+                <label for="exampleInputEmail1" class="text-lg ">Phone</label>
+                <input placeholder="(00) 00000 00000" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+            </div>
+            <div class=""></div>
+        </div>
+
+        <p class="sub-heading mt-2">Address</p>
+        <div class="mt-1">
+            <label for="desired-loan" class="form-label ">Street Address</label>
+            <input type="text" class="form-control" id="esired-loan" aria-describedby="emailHelp">
+            <label for="desired-loan" class="form-label mt-2">Street Address Line 2</label>
+            <input type="text" class="form-control" id="esired-loan" aria-describedby="emailHelp">
+            <div class="main2 mt-3">
+                <div>
+                    <label for="desired-loan" class="form-label ">City</label>
+                    <input type="text" class="form-control" id="esired-loan" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="desired-loan" class="form-label ">State / Province</label>
+                    <input type="text" class="form-control" id="esired-loan" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="desired-loan" class="form-label ">Postal / Zip Code</label>
+                    <input type="number" class="form-control" id="esired-loan" aria-describedby="emailHelp">
+                </div>
+            </div>
+        </div>
+
+        <p class="sub-heading mt-3">How long have you lived in your given address?</p>
+        <div class="main mt-2">
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    0-1 Year
+                </label>
+            </div>
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    1-2 Years
+                </label>
+            </div>
+
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    3-4 Years
+                </label>
+            </div>
+
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    5+ Years
+                </label>
+            </div>
+
+        </div>
+
+        <p class="sub-heading mt-3">Employment Information</p>
+        <div class="main">
+            <div class="mt-2">
+                <p class="text-lg">Present Employer</p>
+                <div class="grid md:grid-cols-2 gap-2">
+                    <input type="text" class="form-control mt-1" id="annual-income" aria-describedby="emailHelp">
+                    <label for="annual-income" class="form-label mt-1">First Name</label>
+                    <input type="text" class="form-control" id="annual-income" aria-describedby="emailHelp">
+                  
+                </div>
+            </div>
+            <div class="mt-2">
+                <p class="text-lg" style="font-size: 1.125rem;
+    line-height: 1.75rem ">Occupation</p>
+                <input type="text" class="form-control" id="annual-income" aria-describedby="emailHelp">
+            </div>
+        </div>
+
+        <p class=" mt-3"
+        style="font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.75rem
+        ">Years of experience</p>
+        <div class="main mt-2">
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="" id="">
+                <label class="form-check-label" for="">
+                    0-1 Year
+                </label>
+            </div>
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="exp1" id="exp1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    1-2 Years
+                </label>
+            </div>
+
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="exp1" id="exp1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    3-4 Years
+                </label>
+            </div>
+
+            <div class="form-check flex items-center">
+                <input class="form-check-input" type="radio" name="exp1" id="exp1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    5+ Years
+                </label>
+            </div>
+
+        </div>
+
+        <div class="main mt-4">
+            <div>
+                <label for="desired-loan" class="form-label text-lg" style="">Gross monthly income</label>
+                <input placeholder="0" type="number" class="form-control" id="esired-loan" aria-describedby="emailHelp">
+
+            </div>
+            <div>
+                <label for="annual-income" class="form-label text-lg">Monthly rent/mortgage</label>
+                <input placeholder="0" type="number" class="form-control" id="annual-income"
+                    aria-describedby="emailHelp">
+            </div>
+            <div>
+                <label for="annual-income" class="form-label text-lg">Down Payment Amount</label>
+                <input placeholder="0" type="number" class="form-control" id="annual-income"
+                    aria-describedby="emailHelp">
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <label for="desired-loan" class="form-label" style="  font-size: 1.125rem;
+    line-height: 1.75rem ">Comments</label>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+
+        <div class="bank-reference-container">
+            <p class="sub-heading mt-3">Bank References</p>
+
+            <div class="bank mt-3 bank-reference-section">
+                <div>
+                    <label for="institution-name" class="form-label">Institution Name</label>
+                    <input type="text" class="form-control" id="institution-name" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="saving-account" class="form-label">Saving Account #</label>
+                    <input type="text" class="form-control" id="saving-account" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+                <div>
+                    <label for="phone-number" class="form-label">Phone Number</label>
+                    <input type="number" class="form-control" id="phone-number" aria-describedby="emailHelp">
+                </div>
+            </div>
+
+            <div class="mt-3 add-more"
+            >
+                <button id="add-reference-btn">
+                    + Add More
+                </button>
+            </div>
+        </div>
+
+        <!-- Template for new bank reference section -->
+        <template id="bank-reference-template">
+            <div class="bank mt-3 bank-reference-section">
+                <div>
+                    <label for="institution-name" class="form-label">Institution Name</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="saving-account" class="form-label">Saving Account #</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+                <div>
+                    <label for="phone-number" class="form-label">Phone Number</label>
+                    <input type="number" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="col-span-4 text-right">
+                    <button class="btn bg-red-500 text-white remove-reference-btn">Remove</button>
+                </div>
+            </div>
+        </template>
+
+
+        <p class="mt-3" style="font-weight: 400; font-size: 1.25rem;
+    line-height: 1.75rem ">Consent</p>
+        <p class="mt-1">I authorize prospective Credit Grantors/Lending/Leasing Companies to obtain personal and credit
+            information about me from my employer and credit bureau, or credit reporting agency, any person who has or
+            may have any financial dealing with me, or from any references I have provided. This information, as well as
+            that provided by me in the application, will be referred to in connection with this lease and any other
+            relationships we may establish from time to time. Any personal and credit information obtained may be
+            disclosed from time to time to other lenders, credit bureaus or other credit reporting agencies.</p>
+        <div class="form-check" style="display: flex;  align-items: center;">
+            <input class="form-check-input" type="radio" name="" id="">
+            <label class="form-check-label" for="">
+                Yes
+            </label>
+        </div>
+
+        <p class=" mt-3
+        ">I hereby agree that the information given is true, accurate and complete as of the date of this application
+            submission</p>
+        <div class="form-check" style="display: flex;  align-items: center;">
+            <input class="form-check-input" type="radio" name="" id="">
+            <label class="form-check-label" for="">
+                Yes
+            </label>
+        </div>
+
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <button type="submit" class="btn btn-primary mt-3">Send Application Now</button>
+        </div>
+    </form>
+</body>
+<script>
+    document.getElementById('add-reference-btn').addEventListener('click', function (event) {
+        event.preventDefault();
+        const template = document.getElementById('bank-reference-template').content.cloneNode(true);
+        document.querySelector('.bank-reference-container').appendChild(template);
+    });
+
+    document.querySelector('.bank-reference-container').addEventListener('click', function (event) {
+        if (event.target.classList.contains('remove-reference-btn')) {
+            event.preventDefault();
+            event.target.closest('.bank-reference-section').remove();
+        }
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</html>
